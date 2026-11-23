@@ -17,4 +17,4 @@ A feature flag is a named switch an app checks before showing a feature. Postern
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).test
