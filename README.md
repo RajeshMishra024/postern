@@ -15,6 +15,14 @@ A feature flag is a named switch an app checks before showing a feature. Postern
 - Audit log and safe concurrent edits (ETag and If-Match)
 - Fast evaluation API backed by a cached snapshot
 
+## Build and run
+
+Requires Java 25.
+
+    ./mvnw verify
+    ./mvnw -pl postern-server spring-boot:run
+    curl http://localhost:8080/actuator/health
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
