@@ -17,9 +17,10 @@ A feature flag is a named switch an app checks before showing a feature. Postern
 
 ## Build and run
 
-Requires Java 25.
+Requires Java 25 and Docker.
 
-    ./mvnw verify
+    docker compose up -d          # start PostgreSQL for local development
+    ./mvnw verify                 # build and test (tests start their own PostgreSQL)
     ./mvnw -pl postern-server spring-boot:run
     curl http://localhost:8080/actuator/health
 

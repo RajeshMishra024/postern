@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: postern-postgres
+    environment:
+      POSTGRES_DB: postern
+      POSTGRES_USER: postern
+      POSTGRES_PASSWORD: postern
+    ports:
+      - "5432:5432"
+    volumes:
+      - postern-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postern -d postern"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postern-pgdata:
